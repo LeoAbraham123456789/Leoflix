@@ -15,7 +15,7 @@ const ListItem = ({index, item}) => {
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const res = await axios.get("/movies/find/" + item, {
+        const res = await axios.get("https://leoflix.onrender.com/api/movies/find/" + item, {
           headers: {
             token:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjYxNTQ3NWMwZDBlNDNjZjlkZmMwOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2OTIzMTYyMywiZXhwIjoyNTMzMjMxNjIzfQ.PBibyNQnxuwtGS85pnVBa1nBdenZbt5og0UB3zqyz5k",

@@ -4,7 +4,7 @@ import { updateMovieStart, updateMovieSuccess, updateMovieFailure, createMovieSt
 export const getMovies=async(dispatch)=>{
     dispatch(getMovieStart());
     try{
-        const res=await axios.get("/movies",{headers: {
+        const res=await axios.get("https://leoflix.onrender.com/api/movies",{headers: {
             token: "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
         },});
         dispatch(getMovieSuccess(res.data));
@@ -16,7 +16,7 @@ export const getMovies=async(dispatch)=>{
 export const createMovies=async(movie,dispatch)=>{
     dispatch(createMovieStart());
     try{
-        const res=await axios.post("/movies",movie,{headers: {
+        const res=await axios.post("https://leoflix.onrender.com/api/movies",movie,{headers: {
             token: "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
         },});
         dispatch(createMovieSuccess(res.data));
@@ -28,7 +28,7 @@ export const createMovies=async(movie,dispatch)=>{
 export const updateMovies=async(movie, id,dispatch)=>{
     dispatch(updateMovieStart());
     try{
-        const res=await axios.put("/movies/"+id,movie,{headers: {
+        const res=await axios.put("https://leoflix.onrender.com/api/movies/"+id,movie,{headers: {
             token: "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
         },});
         dispatch(updateMovieSuccess(res.data));
@@ -40,7 +40,7 @@ export const updateMovies=async(movie, id,dispatch)=>{
 export const deleteMovies=async(id,dispatch)=>{
     dispatch(deleteMovieStart());
     try{
-        await axios.delete("/movies/"+id,{headers: {
+        await axios.delete("https://leoflix.onrender.com/api/movies/"+id,{headers: {
             token: "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
         },});
         dispatch(deleteMovieSuccess(id));

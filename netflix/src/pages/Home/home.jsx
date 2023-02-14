@@ -17,7 +17,7 @@ const Home = ({type}) => {
     const getRandomLists = async ()=>{
       try{
         const res=await axios.get(
-          '/lists'+(type? "?type=" + type: "")+(genre ? "&genre"+genre:""),{
+          'https://leoflix.onrender.com/api/lists'+(type? "?type=" + type: "")+(genre ? "&genre"+genre:""),{
             headers:{
               token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjYxNTQ3NWMwZDBlNDNjZjlkZmMwOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2OTIzMTYyMywiZXhwIjoyNTMzMjMxNjIzfQ.PBibyNQnxuwtGS85pnVBa1nBdenZbt5og0UB3zqyz5k"
             }

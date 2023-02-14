@@ -48,7 +48,7 @@ export default function MovieList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={{pathname: "/movies/" + params.row.id}}>
+            <Link to={{pathname: "https://leoflix.onrender.com/api/movies/" + params.row.id}}>
               <button className="productListEdit" onClick={()=>localStorage.setItem("movie", JSON.stringify(params.row))}>Edit</button>
             </Link>
             <DeleteOutline

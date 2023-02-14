@@ -21,11 +21,11 @@ export const Register = () => {
         setPassword(passwordRef.current.value);
         setUsername(usernameRef.current.value);
         try{
-            await axios.post("auth/register", {email, username, password})
+            await axios.post("https://leoflix.onrender.com/api/auth/register", {email, username, password})
             navigate("/login");
         }
         catch(err){
-
+            console.log(err);
         }
     }
   return (

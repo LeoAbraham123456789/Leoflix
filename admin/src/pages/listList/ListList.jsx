@@ -33,7 +33,7 @@ export default function ListList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={{pathname: "/lists/" + params.row.id}}>
+            <Link to={{pathname: "https://leoflix.onrender.com/api/lists/" + params.row.id}}>
               <button className="productListEdit" onClick={()=>localStorage.setItem("list", JSON.stringify(params.row))}>Edit</button>
             </Link>
             <DeleteOutline

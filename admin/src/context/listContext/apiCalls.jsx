@@ -17,7 +17,7 @@ import {
 export const getLists = async (dispatch) => {
   dispatch(getListsStart());
   try {
-    const res = await axios.get("/lists", {
+    const res = await axios.get("https://leoflix.onrender.com/api/lists", {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
       },
@@ -55,7 +55,7 @@ export const createList=async(list,dispatch)=>{
 export const deleteList=async(id,dispatch)=>{
     dispatch(deleteListStart());
     try{
-        await axios.delete("/lists/"+id,{headers: {
+        await axios.delete("https://leoflix.onrender.com/api/lists/"+id,{headers: {
             token: "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken
         },});
         dispatch(deleteListSuccess(id));
