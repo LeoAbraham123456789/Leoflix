@@ -5,9 +5,9 @@ Users can watch and like the videos. I have used JWT tokens, React Hooks and Con
 More modifications will be done as time permits
 
 ### Deployed Site
-Backend: https://leoflix.onrender.com
+BackEnd: https://leoflix.onrender.com
 \
-Netflix: https://meek-dusk-ab1be4.netlify.app
+FrontEnd: https://meek-dusk-ab1be4.netlify.app
 \
 Admin-Panel: https://wondrous-rolypoly-14f25a.netlify.app
 <pre>
