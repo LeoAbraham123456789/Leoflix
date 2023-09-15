@@ -1,5 +1,5 @@
-# Netflix-Clone
-A personal project done to practise MERN Stack Development
+## It is a full stack Video Streaming Platform
+Users can watch and like the videos. I have used JWT tokens, React Hooks and Context API's to make this.
 
 ## Updates
 More modifications will be done as time permits
